@@ -1,0 +1,28 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, danish]{babel}
+\usepackage[colorlinks]{hyperref}
+% start bib stuff
+\usepackage[backend=bibtex,bibencoding=utf8]{biblatex}
+\usepackage{filecontents}
+\usepackage{url}
+\begin{filecontents*}{general.bib}
+@misc{ref-name-to-give,
+    author = {AUTHOR},
+    year = {2018},
+    title = {TITLE},
+    howpublished = {\url{URL}},
+    note = "[Visited september, 20, 2018]"
+}
+\end{filecontents*}
+\addbibresource{general.bib}
+% end bib stuff
+ 
+\usepackage{blindtext, xfrac}
+
+\begin{document}
+This is an example document \cite{ref-name-to-give}!
+\newpage
+\printbibliography
+\end{document}
